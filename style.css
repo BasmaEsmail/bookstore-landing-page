@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+header{
+    position: relative;
+    top: 0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+
+}
+.logo {
+    position: relative;
+    color: #e96738;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    padding:2px 15px;
+    font-size: 18px;
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255,0.5);
+    transition: 0.4s;
+    transition-property: background;
+}
+.content{
+    max-width: 50vw;
+    margin: 60px;
+}
+.info h2{
+    color: white;
+    font-size: 55px;
+    text-transform: uppercase;
+}
+.info h4{
+    color: #e96738;
+    font-size: 40px;
+}
+.info p{
+    color:white;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.info-btn{
+    color:white ;
+    background-color: #e96738;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+    transition-property: background;
+}
+.info-btn:hover{
+    background-color: #bd4c23;
+}
+.media-icons{
+    display: flex;
+    justify-content: center;
+   
+}
+.media-icons a{
+    color: white;
+    font-size: 25px;
+    margin-right: 5%;
+
+}
+.media-icons a:hover{
+    transform: scale(1.5);
+    transition: 0.2s;
+    transition-property: transform;
+}
+label{
+    display: none;
+}
+ #check {
+    display:none
+} 
+
+/***Responsive Styles***/
+@media (max-width:960px){
+    header .nav{
+        display: none;
+    }
+    label{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        color: white;
+        
+
+    }
+    label:hover{
+        color:#e96738
+    }
+    label .close-btn{
+        display: none;
+    }
+    #check:checked ~ header .nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        width: 100vw;
+    }
+    #check:checked ~ header label .menu-btn{
+        display: none;
+        position: absolute;
+    }
+    #check:checked ~ header label .close-btn{
+        display: block;
+        position: fixed;
+        z-index: 2;
+    }
+    
+
+    
+    .content .info h2{
+        font-size: 45px;
+    }
+    .content .info p{
+        font-size: 14px;
+      }
+    .content .info h4{
+        font-size: 30px;
+    }
+}
+@media (max-width:560px){
+    .content .info h2{
+        font-size: 30px;
+    }
+    .content .info p{
+        font-size: 14px;
+      }
+    .content .info h4{
+        font-size: 20px;
+    }
+
+}
